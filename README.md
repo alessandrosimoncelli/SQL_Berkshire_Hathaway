@@ -1,4 +1,4 @@
-# SQL Berkshire Hathaway — Portfolio Optimization Analysis
+# SQL Berkshire Hathaway - Portfolio Optimization Analysis
 
 ## Purpose & Learning Objectives
 
