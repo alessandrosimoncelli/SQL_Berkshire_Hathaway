@@ -66,8 +66,8 @@ The answer is yes, through a focused, three-move equity rotation that improves t
 | **Portfolio** | | **1.09** |
 
 ### Three Recommendations
-1. **Trim AAPL −6%** - weakest equity Sharpe (0.58), 41% correlated with GOOGL which delivers 2× the risk-adjusted return
-2. **Trim AXP −6%** - most redundant holding (0.68 correlation with BAC), lower Sharpe (0.74 vs BAC's 0.89)
+1. **Trim AAPL -6%** - weakest equity Sharpe (0.58), 41% correlated with GOOGL which delivers 2× the risk-adjusted return
+2. **Trim AXP -6%** - most redundant holding (0.68 correlation with BAC), lower Sharpe (0.74 vs BAC's 0.89)
 3. **Add AEP +6% and NEM +6%** - both outperform most current holdings on Sharpe (0.79 and 0.84), decorrelated from existing positions, and add two exposures the portfolio currently lacks entirely
 
 **AEP rationale:** AI chip stocks are too expensive for Berkshire's value discipline - but data centers still need electricity. AEP is a regulated utility that captures AI infrastructure demand at a value price.
