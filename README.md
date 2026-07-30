@@ -87,5 +87,9 @@ The answer is yes, through a focused, three-move equity rotation that improves t
 ## Repository Contents
 | File | Description |
 | `_FINAL__SQL_Code_Group_9.sql` | SQL data ingestion - daily pricing for AEP and NEM loaded into `pricing_daily_new` |
-| `Group_9_SQL_Berkshire_Hathaway_Presentation.pdf` | Full slide deck with charts, correlation matrix, Sharpe rankings, and before/after comparison |
+| 'SQL_Berkshire_Hathaway_Presentation.pdf` | Full slide deck with charts, correlation matrix, Sharpe rankings, and before/after comparison |
 | `README.md` | This file |
+
+
+'SQL_Berkshire_Hathaway_Presentation.pdf`: Client-facing portfolio optimization presentation delivered to Berkshire Hathaway. Covers current portfolio analysis, SQL-driven quantitative findings, and three targeted recommendations to improve risk-adjusted returns while preserving the fund's core investment philosophy.
+
