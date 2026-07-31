@@ -141,4 +141,4 @@ NEM is a miner, not physical gold. It carries operational leverage, meaning it a
 
 ## Team
 
-Group 9 - Hult International Business School, 2026
+Alessandro Simoncelli + Group 9 - Hult International Business School, 2026
