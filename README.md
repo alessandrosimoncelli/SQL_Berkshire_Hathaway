@@ -1,5 +1,6 @@
 # SQL Berkshire Hathaway - portfolio optimization analysis
-**Hult International Business School - Group project**
+**Hult International Business School**
+
 ---
 
 ## Purpose
@@ -26,15 +27,19 @@ The database is named `Hult_Capital_9` and runs on a local MySQL server (127.0.0
 Stores client records. Each client has a unique `customer_id` (primary key), along with name, email, and location fields. Berkshire Hathaway is loaded as customer_id 1.
 
 **accounts_dim**
-Stores accounts linked to each client. `account_id` is the primary key. The column `customer_id` references `customer_details.customer_id` logically but is not enforced as a foreign key constraint in the DDL — it is noted in a comment only.
+Stores accounts linked to each client. `account_id` is the primary key. The column `customer_id` references `customer_details.customer_id` logically but is not enforced as a foreign key constraint in the DDL.
 
 **holdings_dim**
-Stores each position held per account. The primary key is `account_id_ticker`, a composite string (e.g. `101_AAPL`) that uniquely identifies one holding within one account. The columns `account_id` and `ticker` reference other tables logically but again are not enforced as foreign key constraints in the DDL.
+Stores each position held per account. The primary key is `account_id_ticker`, a composite string (e.g. `101_AAPL`) that uniquely identifies one holding within one account. The columns `account_id` and `ticker` reference other tables logically but are not enforced as foreign key constraints in the DDL.
+
+**security_masterlist**
+Stores reference data for each security: name, ticker (primary key), asset class, and security type.
 
 **pricing_daily_new**
 The main data table. Stores daily OHLCV price records for every ticker. The primary key is `ticker_date_type`, a composite string (e.g. `AAPL_2023-06-12_Adj Close`) that uniquely identifies one price type for one ticker on one date. This table contains roughly three years of daily data across all holdings, generated via Python and yfinance and loaded through bulk INSERT statements.
 
-**Note on foreign keys**: the relationships between tables (customer_id in accounts_dim, account_id and ticker in holdings_dim) are logical references only. No FOREIGN KEY ... REFERENCES constraints were declared in the DDL. The schema enforces uniqueness through primary keys but does not enforce referential integrity at the database level. For a project of this size with a single user and controlled data ingestion, this was a conscious simplification — in a production environment with multiple users or automated data pipelines, enforced foreign keys would be necessary to guarantee data consistency.
+**Note on foreign keys:** the relationships between tables (customer_id in accounts_dim, account_id and ticker in holdings_dim) are logical references only. No `FOREIGN KEY ... REFERENCES` constraints were declared in the DDL. The schema enforces uniqueness through primary keys but does not enforce referential integrity at the database level. For a project of this size with a single user and controlled data ingestion, this was a conscious simplification — in a production environment with multiple users or automated data pipelines, enforced foreign keys would be necessary to guarantee data consistency.
+
 ---
 
 ## Analysis
