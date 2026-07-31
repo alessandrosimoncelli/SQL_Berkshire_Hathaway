@@ -34,8 +34,7 @@ Stores each position held per account. The primary key is `account_id_ticker`, a
 **pricing_daily_new**
 The main data table. Stores daily OHLCV price records for every ticker. The primary key is `ticker_date_type`, a composite string (e.g. `AAPL_2023-06-12_Adj Close`) that uniquely identifies one price type for one ticker on one date. This table contains roughly three years of daily data across all holdings, generated via Python and yfinance and loaded through bulk INSERT statements.
 
-**Note on foreign keys:** the relationships between tables (customer_id in accounts_dim, account_id and ticker in holdings_dim) are logical references only. No `FOREIGN KEY ... REFERENCES` constraints were declared in the DDL. The schema enforces uniqueness through primary keys but does not enforce referential integrity at the database level.
-
+**Note on foreign keys**: the relationships between tables (customer_id in accounts_dim, account_id and ticker in holdings_dim) are logical references only. No FOREIGN KEY ... REFERENCES constraints were declared in the DDL. The schema enforces uniqueness through primary keys but does not enforce referential integrity at the database level. For a project of this size with a single user and controlled data ingestion, this was a conscious simplification — in a production environment with multiple users or automated data pipelines, enforced foreign keys would be necessary to guarantee data consistency.
 ---
 
 ## Analysis
