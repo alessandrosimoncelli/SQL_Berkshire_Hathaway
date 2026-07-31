@@ -36,32 +36,6 @@ The main data table. Stores daily OHLCV price records for every ticker. The prim
 
 **Note on foreign keys:** the relationships between tables (customer_id in accounts_dim, account_id and ticker in holdings_dim) are logical references only. No `FOREIGN KEY ... REFERENCES` constraints were declared in the DDL. The schema enforces uniqueness through primary keys but does not enforce referential integrity at the database level.
 
-### Schema diagram
-
-```
-customer_details         accounts_dim            holdings_dim
-----------------         ------------            ------------
-customer_id (PK)  <--   customer_id             account_id_ticker (PK)
-full_name                account_id (PK)   <--  account_id
-first_name               main_account            ticker  ---------->  security_masterlist
-last_name                acct_open_status        value                 ---------------
-email                    acct_open_date          quantity              ticker (PK)
-location                                         date                  security_name
-                                                                       sec_type
-                                                                       major_asset_class
-                                                                       minor_asset_class
-
-pricing_daily_new
------------------
-ticker_date_type (PK)
-date
-ticker
-price_type
-price
-```
-
-Arrows indicate logical foreign key references. None are enforced as constraints in the DDL.
-
 ---
 
 ## Analysis
