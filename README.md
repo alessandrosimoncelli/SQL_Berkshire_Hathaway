@@ -1,5 +1,5 @@
 # SQL Berkshire Hathaway - portfolio optimization analysis
-**Hult International Business School 
+**Hult International Business School - Group project**
 ---
 
 ## Purpose
